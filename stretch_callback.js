@@ -4,7 +4,8 @@ var wrapLog = function (callback, name) {
     return function(x, y){
       console.log(name + "(" + x.toString() + ', ' + y.toString() + ') => ' + callback(x,y));
     }
-  } else if (name === "volume"){
+  }
+  if (name === "volume"){
     return function(x, y, z){
       console.log(name + "(" + x.toString() + ', ' + y.toString() + ', ' + z.toString() + ') => ' + callback(x,y,z));
     }
